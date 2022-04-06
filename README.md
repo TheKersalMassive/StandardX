@@ -1,7 +1,7 @@
 # Standard X
 Standard desktop theme for Playnite based on XBOX
 
-![Main](https://github.com/TheKersalMassive/StandardX/blob/main/Media/screenshot-01.jpg)
+![Main](https://raw.githubusercontent.com/TheKersalMassive/StandardX/main/Media/screenshot-01.jpg)
 
 # FAQ
 
