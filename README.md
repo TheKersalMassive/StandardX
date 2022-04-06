@@ -1,11 +1,11 @@
 # Standard X
 Standard desktop theme for Playnite based on XBOX
 
-![Main](https://raw.githubusercontent.com/TheKersalMassive/StandardX/main/Media/screenshot_01.jpg)
+![Main](https://github.com/TheKersalMassive/StandardX/blob/main/Media/screenshot-01.jpg)
 
 # FAQ
 
-## How do I get the launcher text above the game title when a game is selected?
+## How do I get the launcher text when a game is selected?
 This is based on the **'Source'** field, if you want to show 'Steam', 'Ubisoft' or 'Yuzu' as in the above screenshot, you will need to set these sources in the source field of your game(s).
 
 ## Can you add support for any extensions or add-ons?
