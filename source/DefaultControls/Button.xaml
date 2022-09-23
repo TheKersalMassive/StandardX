@@ -19,7 +19,7 @@
                     <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"                            
                             CornerRadius="{DynamicResource ControlCornerRadius}" Style="{DynamicResource HighlightBorder}"
                             BorderBrush="{TemplateBinding BorderBrush}">
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        <ContentPresenter TextBlock.FontWeight="SemiBold" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" />
                     </Border>
@@ -36,6 +36,10 @@
                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
             </Trigger>
+			<Trigger Property="IsFocused" Value="True">
+			   <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+			   <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
+			</Trigger>
         </Style.Triggers>
     </Style>                  
 </ResourceDictionary>
