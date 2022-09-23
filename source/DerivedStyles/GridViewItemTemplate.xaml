@@ -47,12 +47,12 @@
 									
 									<Button Name="PART_ButtonPlay" Style="{StaticResource ActionButton}"
 											VerticalAlignment="Center" Visibility="Collapsed"
-											Content="&#xe768;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" />
+											Content="&#xe768;" FontFamily="Segoe MDL2 Assets" />
 								</StackPanel>
 								</Grid>
 						
                             </Grid>
-                            <TextBlock Text="{Binding DisplayName}" Background="Black" 
+                            <TextBlock Text="{Binding DisplayName}" Background="#202020" 
                                    Style="{DynamicResource BaseTextBlockStyle}"                                                                   
                                    TextAlignment="Left" TextTrimming="CharacterEllipsis"
                                    VerticalAlignment="Center" FontWeight="SemiBold"
@@ -95,7 +95,7 @@
 						<DataTrigger Binding="{Binding Source.Name}" Value="">
 							<Setter Property="Text" Value="{Binding DisplayName}" TargetName="GameSource" />
                         </DataTrigger>
-
+						
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
