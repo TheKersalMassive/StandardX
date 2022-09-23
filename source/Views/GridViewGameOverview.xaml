@@ -55,12 +55,26 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
+								
+								<DockPanel DockPanel.Dock="Top">
+									<ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" Margin="20,30"  />	
+											<DockPanel.Style>
+												<Style TargetType="DockPanel">
+													<Setter Property="Visibility" Value="Collapsed" />
+													<Style.Triggers>
+														<DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsLogoAvailable, FallbackValue=False}" Value="True">
+															<Setter Property="Visibility" Value="Visible" />
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</DockPanel.Style>
+								</DockPanel>
 
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
                                            RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
-                                    <TextBlock Text="{Binding Game.DisplayName}" FontSize="{DynamicResource FontSizeLarger}"
-                                               TextWrapping="Wrap" DockPanel.Dock="Left" FontWeight="Bold"
+                                    <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
+                                               TextWrapping="Wrap" DockPanel.Dock="Left" FontWeight="SemiBold"
                                                VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
                                         <TextBlock.Effect>
                                             <DropShadowEffect ShadowDepth="3"/>
@@ -71,7 +85,7 @@
                                 <Grid DockPanel.Dock="Top" Margin="0,10,0,10" Background="Transparent">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" MaxWidth="150" />
-                                        <ColumnDefinition Width="*" MaxWidth="150" />
+                                        <ColumnDefinition Width="*" MaxWidth="50" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Button Name="PART_ButtonPlayAction" Grid.Column="0"
@@ -79,11 +93,11 @@
                                     <Button Name="PART_ButtonContextAction"
                                             Height="40" Grid.Column="0" />
                                     <Button Name="PART_ButtonMoreActions"
-                                            Content="{DynamicResource LOCMoreAction}"
+                                            Content="&#xe712;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontWeight="Bold"
                                             Height="40" Grid.Column="1" Margin="10,0,0,0" />
                                     <Button x:Name="PART_ButtonEditGame" Grid.Column="2"
                                             Margin="10,0,5,0" Height="40" Focusable="False"
-                                            Content="&#xe70f;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets">
+                                            Content="&#xe70f;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontWeight="Bold">
                                         <Button.Style>
                                             <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
                                                 <Setter Property="Visibility" Value="Hidden" />
@@ -98,7 +112,7 @@
                                 </Grid>
 
                                 <ScrollViewer DockPanel.Dock="Top" HorizontalAlignment="Stretch"
-                                              HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                                              HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" x:Name="PART_ScrollViewHost" >
                                     <DockPanel>
                                         <StackPanel DockPanel.Dock="Top" Margin="5,0,0,0">
                                             <StackPanel.Resources>
@@ -109,13 +123,14 @@
                                                     <Setter Property="Margin" Value="0,4,8,4" />
                                                     <Setter Property="VerticalAlignment" Value="Top" />
                                                     <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+													<Setter Property="FontWeight" Value="SemiBold" />			 
                                                 </Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                             </StackPanel.Resources>
 
                                             <GridEx Margin="0,5,0,10"
                                                     ColumnCount="2" StarColumns="1"
-                                                    RowCount="21" AutoLayoutColumns="2">
+                                                    RowCount="24" AutoLayoutColumns="2">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                 </Grid.Resources>
@@ -128,7 +143,13 @@
 
                                                 <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
                                                 <Button Name="PART_ButtonCompletionStatus" VerticalAlignment="Center" />
-
+												
+											   <Label Name="PART_ElemInstallDirectory" Content="{DynamicResource LOCGameInstallDirTitle}" />
+											   <Button Name="PART_ButtonInstallDirectory" VerticalAlignment="Center" />
+												
+											   <Label Name="PART_ElemInstallSize" Content="{DynamicResource LOCInstallSizeLabel}" />
+											   <TextBlock Name="PART_TextInstallSize" VerticalAlignment="Center" />
+ 		                                                
                                                 <Label Name="PART_ElemLibrary" Content="{DynamicResource LOCGameProviderTitle}" />
                                                 <Button Name="PART_ButtonLibrary" VerticalAlignment="Center" />
 
@@ -194,14 +215,14 @@
                                                        Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
                                             <TextBox Name="PART_TextNotes" IsReadOnly="True"
-                                                     BorderThickness="0"
+                                                     BorderThickness="0" FontWeight="SemiBold"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
                                                      Margin="-1,0,-1,0" Padding="0"/>
                                         </StackPanel>
 
                                         <StackPanel Name="PART_ElemDescription" DockPanel.Dock="Top"
                                                     Margin="5,0,5,0">
-                                            <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
+                                            <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" FontWeight="SemiBold"
                                                        Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
                                             <HtmlTextView Name="PART_HtmlDescription"

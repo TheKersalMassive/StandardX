@@ -55,6 +55,16 @@
         <TextBlock Text="&#xf133;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DataTemplate>
+	
+   <DataTemplate x:Key="TopPanelViewSelectRandomGameButtonTemplate">
+	   <TextBlock Text="&#xe8b1;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
+				  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+   </DataTemplate>
+	
+	<DataTemplate x:Key="TopPanelSearchButtonTemplate">
+		   <TextBlock Text="&#xe721;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
+					  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+	</DataTemplate>
 
     <Style x:Key="TopPanelMenu" TargetType="{x:Type ContextMenu}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -89,24 +99,34 @@
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}" BorderThickness="0"
                             CornerRadius="3">
-                        <StackPanel Orientation="Horizontal" Margin="6,0,6,0">
+                        <Grid Margin="6,0,6,0">
                             <TextBlock Text="&#xe71c;"
                                        FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Foreground="{TemplateBinding Foreground}"/>
-                            <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
+							<TextBlock Name="TextFilterCircle" Text="&#xf137;" Visibility="Collapsed" Margin="15,0,0,0"
+                                       FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
+                                       VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                                       Foreground="{DynamicResource WarningBrush}"/>
+							<TextBlock Name="TextFilterCheck" Text="&#xf13e;" Visibility="Collapsed" Margin="15,0,0,0"
+                                       FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="20"
+                                       VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                                       Foreground="White"/>
+ <!--                            <TextBlock Text="{DynamicResource LOCFilterActiveLabel}"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Margin="3,0,0,0" VerticalAlignment="Center"
-                                       Name="TextFilter" />
-                        </StackPanel>
+                                       Name="TextFilter" /> -->
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Tag" Value="{StaticResource True}">
-                            <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="TextFilterCircle" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="TextFilterCheck" />
+                            <!-- <Setter Property="Visibility" Value="Visible" TargetName="TextFilter" /> -->
                             <Setter Property="Background" Value="{DynamicResource NormalBrush}" />
                         </Trigger>
                         <Trigger Property="Tag" Value="{StaticResource False}">
-                            <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" />
+                            <!-- <Setter Property="Visibility" Value="Collapsed" TargetName="TextFilter" /> -->
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -114,7 +134,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource HoverBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -150,7 +170,7 @@
                 <Setter Property="Visibility" Value="Collapsed"/>
             </DataTrigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource HoverBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
