@@ -30,7 +30,8 @@
     <Color x:Key="BackgroundToneColor">#151515</Color>
     <Color x:Key="GridItemBackgroundColor">#090909</Color>														  
     <Color x:Key="PanelSeparatorColor">#2c2c2c</Color>
-	<Color x:Key="WindowPanelSeparatorColor">#2c2c2c</Color>														  
+	<Color x:Key="WindowPanelSeparatorColor">#2c2c2c</Color>		
+	<Color x:Key="DataChangeNotifColor">#ff2882</Color>
 
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="Transparent" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
@@ -51,11 +52,12 @@
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource MainColorDark}" />
     <SolidColorBrush x:Key="WindowBackgourndBrush" Color="#151515" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="#101010" />
-
+	<SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
+   
 	<SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
-    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#ff6b6b" />
+    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#ff2882" />
     <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
-    <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />	
+    <SolidColorBrush x:Key="WarningBrush" Color="#ff2882" />	
 	
     <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
         <GradientStop Color="#FF4c4c4c" Offset="0"/>

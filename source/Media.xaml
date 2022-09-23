@@ -17,7 +17,8 @@
     <TextBlock x:Key="InstallIcon" Text="&#xe896;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
     <TextBlock x:Key="LinksIcon" Text="&#xe71b;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
     <TextBlock x:Key="OpenFolderIcon" Text="&#xe8b7;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
-    <TextBlock x:Key="DesktopShortcutIcon" Text="&#xe8a7;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
+	<TextBlock x:Key="InstallSizeIcon" Text="&#xecaa;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}"/>
+	<TextBlock x:Key="DesktopShortcutIcon" Text="&#xe8a7;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
     <TextBlock x:Key="AddFavoritesIcon" Text="&#xecc8;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" />
     <TextBlock x:Key="RemoveFavoritesIcon" Text="&#xecc9;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
     <TextBlock x:Key="HideIcon" Text="&#xed1a;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
@@ -26,6 +27,8 @@
     <TextBlock x:Key="RemoveGameIcon" Text="&#xe711;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="OrangeRed" />
     <TextBlock x:Key="DiceIcon" Text="&#xf133;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
     <TextBlock x:Key="ManualIcon" Text="&#xe8a5;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Foreground="{DynamicResource TextBrush}" />
+	<TextBlock x:Key="BackupIcon" Text="&#xe74e;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" />
+	<TextBlock x:Key="RestoreBackupIcon" Text="&#xe777;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" />
 
     <TextBlock x:Key="ClearTextIcon" Text="&#xe750;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets"/>
     <TextBlock x:Key="SearchTextIcon" Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" />
@@ -41,6 +44,7 @@
         <TextBlock Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" />
     </DataTemplate>
 
+	<BitmapImage x:Key="PlayniteLogo" UriSource="{ThemeFile 'Images/applogo.png'}" popt:Freeze="True" />
     <BitmapImage x:Key="DefaultGameIcon" UriSource="{ThemeFile 'Images/applogo_dark.png'}" popt:Freeze="True" />
     <BitmapImage x:Key="DefaultGameCover" UriSource="{ThemeFile 'Images/custom_cover_background.png'}" popt:Freeze="True" />
 
