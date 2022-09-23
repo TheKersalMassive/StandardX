@@ -6,3 +6,10 @@ Packages:
     PackageUrl: https://github.com/TheKersalMassive/StandardX/releases/download/v1.0/StandardX_1_0.pthm
     Changelog:
       - Initial release for Playnite 
+  - Version: 1.1
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-09-23
+    PackageUrl: https://github.com/TheKersalMassive/StandardX/releases/download/v1.1/StandardX_1_1.pthm
+    Changelog:
+      - Updated for Playnite 10
+      - Added support for Extra Metadata Loader (on Grid View only)
