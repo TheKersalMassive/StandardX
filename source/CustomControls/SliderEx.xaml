@@ -17,8 +17,7 @@
 
     <Style TargetType="{x:Type SliderEx}" BasedOn="{StaticResource {x:Type Slider}}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Slider}">
@@ -30,19 +29,23 @@
                         </Grid.RowDefinitions>
                         <TickBar x:Name="TopTick" Visibility="Collapsed" Height="4" Placement="Top"
                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"  Fill="{DynamicResource GlyphBrush}" />
-                        <Border x:Name="Border" Grid.Row="1" Margin="0" Height="6" CornerRadius="{DynamicResource ControlCornerRadius}"
-                                Background="{TemplateBinding Background}" BorderBrush="{DynamicResource NormalBorderBrush}"
-                                BorderThickness="{DynamicResource ControlBorderThickness}" />
+					
+						<Border x:Name="Border" Grid.Row="1" Margin="0" Height="6" CornerRadius="3"
+                                Background="#FF000000" />
+						<Border Grid.Row="1" Margin="0" Height="6" VerticalAlignment="Center" HorizontalAlignment="Left"
+							   Background="White" CornerRadius="3,0,0,3"
+							   Width="{Binding ActualWidth, ElementName=ButtonDecrease}" />	
+							   
                         <Track Grid.Row="1" x:Name="PART_Track">
                             <Track.Thumb>
-                                <Thumb Width="10" />
+                                <Thumb Width="8" Height="20" />
                             </Track.Thumb>
                             <Track.DecreaseRepeatButton>
-                                <RepeatButton Style="{StaticResource SliderExTrackButton}"
+                                <RepeatButton x:Name="ButtonDecrease" Style="{StaticResource SliderExTrackButton}"
                                               Command="Slider.DecreaseLarge" />
                             </Track.DecreaseRepeatButton>
                             <Track.IncreaseRepeatButton>
-                                <RepeatButton Style="{StaticResource SliderExTrackButton}"
+                                <RepeatButton x:Name="ButtonIncrease" Style="{StaticResource SliderExTrackButton}"
                                               Command="Slider.IncreaseLarge" />
                             </Track.IncreaseRepeatButton>
                         </Track>

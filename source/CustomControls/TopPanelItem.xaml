@@ -28,7 +28,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource HoverBrush}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
