@@ -13,3 +13,9 @@ Packages:
     Changelog:
       - Updated for Playnite 10
       - Added support for Extra Metadata Loader (on Grid View only)
+  - Version: 1.2
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-09-24
+    PackageUrl: https://github.com/TheKersalMassive/StandardX/releases/download/v1.2/StandardX_1_2.pthm
+    Changelog:
+      - Minor UI/UX updates to Settings Menu, Slider and Filter buttons
